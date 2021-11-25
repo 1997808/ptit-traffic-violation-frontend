@@ -1,15 +1,14 @@
 import React from "react";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
+import { Outlet } from "react-router-dom";
+import { Header } from "../../components/Header/Header";
+import { Footer } from "../../components/Footer/Footer";
 
-const AdminLayout = ({ children }) => {
+export const AdminLayout = () => {
   return (
     <>
       <Header />
-      <>{children}</>
+      <Outlet />
       <Footer />
     </>
   );
 };
-
-export default AdminLayout;

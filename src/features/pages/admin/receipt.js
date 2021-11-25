@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Receipt() {
+export const Receipt = () => {
   return (
     <div className="">
       <p>404</p>
     </div>
   );
-}
+};

@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Login() {
+export const Login = () => {
   return (
     <div className="">
       <p>404</p>
     </div>
   );
-}
+};

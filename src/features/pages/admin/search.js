@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Search() {
+export const Search = () => {
   return (
     <div className="">
       <p>404</p>
     </div>
   );
-}
+};

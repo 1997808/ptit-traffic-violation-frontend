@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function ItemDetail() {
+export const ItemDetail = () => {
   return (
     <div className="">
       <p>404</p>
     </div>
   );
-}
+};
