@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Slider = (title) => {
+export const Slider = ({ title }) => {
   return (
     <>
       <h1>{title}</h1>
