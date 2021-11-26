@@ -1,9 +1,14 @@
 import React from "react";
 
-export const Button = ({ title }) => {
+export const Button = ({ text }) => {
   return (
     <>
-      <h1>{title}</h1>
+      <button
+        class="px-5 py-1 flex items-center justify-center border border-gray-500"
+        type="button"
+      >
+        <p className="text-sm">{text}</p>
+      </button>
     </>
   );
 };

@@ -1,14 +1,14 @@
 import React from "react";
-import { Heading } from "../Heading/Heading";
+import { Heading } from "../../components/Heading/Heading";
 import {
   demo_heading,
   demo_subtitle,
   demo_category,
 } from "../../assets/constant";
-import { BigBlogCard } from "../BigBlogCard/BigBlogCard";
+import { BigBlogCard } from "../../components/BigBlogCard/BigBlogCard";
 import car1 from "../../assets/car-1.jpg";
 
-export const PopularCard = ({ title }) => {
+export const PopularCardList = () => {
   return (
     <>
       <div className="container mx-auto h-auto">
