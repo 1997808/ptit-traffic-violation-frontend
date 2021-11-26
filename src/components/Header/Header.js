@@ -2,19 +2,8 @@ import React from "react";
 
 export const Header = ({ title }) => {
   return (
-    <>
-      <h1>Header</h1>
-      <div className="btn-group" role="group" aria-label="Basic example">
-        <button type="button" className="btn btn-primary">
-          Left
-        </button>
-        <button type="button" className="btn btn-primary">
-          Middle
-        </button>
-        <button type="button" className="btn btn-primary">
-          Right
-        </button>
-      </div>
-    </>
+    <div className="fixed z-30 top-0 left-0 w-full h-20 bg-opacity-80 bg-black">
+      <div className="container mx-auto"></div>
+    </div>
   );
 };
