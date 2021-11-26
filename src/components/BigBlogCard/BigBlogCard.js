@@ -3,8 +3,12 @@ import React from "react";
 export const BigBlogCard = ({ title, category, image }) => {
   return (
     <>
-      <div className="relative w-full h-full">
-        <img className="w-full h-full object-cover" src={image} alt="banner" />
+      <div className="relative w-full h-full overflow-hidden group">
+        <img
+          className="w-full h-full object-cover transform transition duration-300 scale-100 group-hover:scale-110"
+          src={image}
+          alt="banner"
+        />
         <div className="absolute w-full h-full top-0 left-0 p-8 flex items-end">
           <div className="text-white">
             <p className="text-sm">{category}</p>

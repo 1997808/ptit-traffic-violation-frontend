@@ -9,13 +9,25 @@ import { GuideCardList } from "../../../container/GuideCardList/GuideCardList";
 
 export const Home = () => {
   return (
-    <div className="">
-      <Slider />
-      <QuickSearch />
-      <PopularCardList />
-      <CourseCardList />
-      <ClientCardList />
-      <GuideCardList />
+    <div className="w-full h-auto">
+      <div className="relative w-full pb-24 mb-20">
+        <Slider />
+        <div className="absolute w-full bottom-0 left-0">
+          <QuickSearch />
+        </div>
+      </div>
+      <div className="mb-16">
+        <PopularCardList />
+      </div>
+      <div className="mb-16">
+        <CourseCardList />
+      </div>
+      <div className="mb-16">
+        <ClientCardList />
+      </div>
+      <div className="mb-16">
+        <GuideCardList />
+      </div>
     </div>
   );
 };
