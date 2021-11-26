@@ -12,13 +12,13 @@ export const CourseCardList = () => {
           <Heading title={demo_heading} subtitle={demo_subtitle} />
         </div>
         <div className="grid grid-cols-3 gap-4" style={{ maxHeight: "500px" }}>
-          <div className="col-span-1 row-span-2">
+          <div className="col-span-1">
             <CourseCard title={demo_heading} price={demo_price} image={car1} />
           </div>
-          <div className="col-span-1 row-span-2">
+          <div className="col-span-1">
             <CourseCard title={demo_heading} price={demo_price} image={car1} />
           </div>
-          <div className="col-span-1 row-span-2">
+          <div className="col-span-1">
             <CourseCard title={demo_heading} price={demo_price} image={car1} />
           </div>
         </div>
