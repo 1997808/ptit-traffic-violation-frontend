@@ -14,7 +14,7 @@ export const Header = () => {
             <Link to="/search">
               <p className="text-base px-6 py-2">Tìm kiếm</p>
             </Link>
-            <Link to="/">
+            <Link to="/blog">
               <p className="text-base px-6 py-2">Bài viết</p>
             </Link>
             <Link to="/">

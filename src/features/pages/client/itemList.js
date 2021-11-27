@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Search = () => {
+export const ItemList = () => {
   return (
     <div className="">
-      <p>404</p>
+      <p>item list</p>
     </div>
   );
 };
