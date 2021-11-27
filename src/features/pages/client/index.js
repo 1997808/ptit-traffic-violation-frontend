@@ -10,7 +10,7 @@ import { GuideCardList } from "../../../container/GuideCardList/GuideCardList";
 export const Home = () => {
   return (
     <div className="w-full h-auto">
-      <div className="relative w-full pb-20 mb-20">
+      <div className="relative w-full pb-16 lg:pb-20 mb-20">
         <Slider />
         <div className="absolute w-full bottom-0 left-0">
           <QuickSearch />

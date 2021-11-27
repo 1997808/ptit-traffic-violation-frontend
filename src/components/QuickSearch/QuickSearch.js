@@ -1,6 +1,7 @@
 import React from "react";
 import { ButtonGradient } from "../Button/ButtonGradient";
 import { useForm } from "react-hook-form";
+import { input_normal } from "../../assets/css_constant";
 
 export const QuickSearch = () => {
   const { register, handleSubmit } = useForm();
@@ -19,7 +20,7 @@ export const QuickSearch = () => {
                   type="text"
                   placeholder="nhập số quyết định"
                   {...register("id", { required: true })}
-                  className="h-10 w-full focus:outline-none border border-gray-200 px-4"
+                  className={input_normal}
                 />
               </div>
               <div className="col-span-1">
@@ -28,14 +29,14 @@ export const QuickSearch = () => {
                   type="text"
                   placeholder="VD: 30A12345"
                   {...register("licensePlate", { required: true })}
-                  className="h-10 w-full focus:outline-none border border-gray-200 px-4"
+                  className={input_normal}
                 />
               </div>
               <div className="col-span-1">
                 <p className="mb-2">Loại phương tiện</p>
                 <select
                   {...register("vehicle", { required: true })}
-                  className="h-10 w-full focus:outline-none border border-gray-200 px-4"
+                  className={input_normal}
                 >
                   <option value="oTo">Ô tô</option>
                   <option value="xeMay">Xe máy</option>

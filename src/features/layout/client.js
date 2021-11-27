@@ -6,9 +6,13 @@ import { Footer } from "../../components/Footer/Footer";
 export const ClientLayout = () => {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <div className="flex flex-col justify-between min-h-screen">
+        <Header />
+        <div className="flex flex-grow">
+          <Outlet />
+        </div>
+        <Footer />
+      </div>
     </>
   );
 };
