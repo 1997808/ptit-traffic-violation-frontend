@@ -3,7 +3,7 @@ import React from "react";
 export const ClientCard = ({ name, rating, date, content, image }) => {
   return (
     <>
-      <div className="w-full h-auto shadow-xl rounded-lg p-8">
+      <div className="w-full h-auto transition duration-300 shadow-xl hover:shadow-none rounded-lg p-8">
         <div className="flex justify-between pb-4 lg:pb-8">
           <div className="flex">
             <img

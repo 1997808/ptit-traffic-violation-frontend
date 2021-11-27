@@ -4,10 +4,10 @@ export const ButtonGradient = ({ text, type }) => {
   return (
     <>
       <button
-        className="px-8 py-2 flex items-center justify-center bg-gradient-to-r text-white from-purple-500 to-blue-700 hover:from-blue-700 hover:to-purple-500"
+        className="px-8 py-2 flex items-center justify-center bg-gradient-to-r text-white transition duration-300 bg-indigo-600 hover:bg-indigo-800"
         type={type}
       >
-        <p className="text-base">{text}</p>
+        <p className="text-sm lg:text-base">{text}</p>
       </button>
     </>
   );
