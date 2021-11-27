@@ -19,7 +19,7 @@ export const Slider = () => {
                 cứu, nộp phạt quyết định xử phạt vi phạm hành chính trong lĩnh
                 vực giao thông đường bộ
               </p>
-              <ButtonGradient text={"Tìm kiếm"} />
+              <ButtonGradient text={"Hướng dẫn"} type="button" />
             </div>
           </div>
         </div>
