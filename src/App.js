@@ -6,6 +6,8 @@ import { Login } from "./features/pages/client/login";
 import { Page404 } from "./features/pages/client/404";
 import { Blog } from "./features/pages/client/blog";
 import { ItemList } from "./features/pages/client/itemList";
+import { Help } from "./features/pages/client/help";
+import { Contact } from "./features/pages/client/contact";
 
 import { ClientLayout } from "./features/layout/client";
 import { Search } from "./features/layout/search";
@@ -22,6 +24,8 @@ function App() {
             <Route path=":itemId" element={<ItemDetail />} />
           </Route>
           <Route path="blog" element={<Blog />} />
+          <Route path="help" element={<Help />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />
           <Route path="*" element={<Page404 />} />
         </Route>

@@ -17,10 +17,10 @@ export const Header = () => {
             <Link to="/blog">
               <p className="text-base px-6 py-2">Bài viết</p>
             </Link>
-            <Link to="/">
+            <Link to="/help">
               <p className="text-base px-6 py-2">Hướng dẫn</p>
             </Link>
-            <Link to="/">
+            <Link to="/contact">
               <p className="text-base px-6 py-2">Liên hệ</p>
             </Link>
           </div>

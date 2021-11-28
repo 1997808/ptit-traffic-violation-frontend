@@ -1,6 +1,7 @@
 import React from "react";
 import { AdvanceSearch } from "../../../components/AdvanceSearch/AdvanceSearch";
 import { HelpCardList } from "../../../container/HelpCardList/HelpCardList";
+import { SearchItemList } from "../../../container/SearchItemList/SearchItemList";
 
 export const ItemList = () => {
   return (
@@ -8,7 +9,10 @@ export const ItemList = () => {
       <div className="pt-8 mb-20">
         <AdvanceSearch />
       </div>
-      <div className="container mx-auto mb-20">
+      <div className="container mx-auto mb-10">
+        <div className="mb-20">
+          <SearchItemList />
+        </div>
         <p className="text-sm text-gray-400">
           Tra cứu, nộp phạt quyết định xử phạt vi phạm hành chính trong lĩnh vực
           giao thông đường bộ:
