@@ -3,7 +3,7 @@ import { ButtonGradient } from "../Button/ButtonGradient";
 import { useForm } from "react-hook-form";
 import { input_normal } from "../../assets/css_constant";
 
-export const QuickSearch = () => {
+export const AdvanceSearch = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
 
@@ -11,9 +11,20 @@ export const QuickSearch = () => {
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="container mx-auto p-8 lg:p-12 shadow-xl rounded-lg bg-white">
+          <div className="text-lg lg:text-xl flex justify-center font-semibold pb-6">
+            Tra cứu, nộp phạt quyết định xử phạt vi phạm
+          </div>
           <div className="w-full h-auto flex justify-between items-center">
-            <div className="text-lg lg:text-xl">Tra cứu nhanh</div>
-            <div className="grid grid-cols-2 gap-4 flex-grow px-4 lg:px-8">
+            <div className="grid grid-cols-3 gap-4 lg:gap-8 flex-grow pr-4 lg:pr-8">
+              <div className="col-span-1">
+                <p className="mb-2">Số quyết định</p>
+                <input
+                  type="text"
+                  placeholder="nhập số quyết định"
+                  {...register("id", { required: true })}
+                  className={input_normal}
+                />
+              </div>
               <div className="col-span-1">
                 <p className="mb-2">Biển kiểm soát</p>
                 <input
@@ -35,7 +46,7 @@ export const QuickSearch = () => {
                 </select>
               </div>
             </div>
-            <div>
+            <div className="">
               <p className="mb-2 opacity-0">Null</p>
               <ButtonGradient text={"Tìm kiếm"} type="submit" />
             </div>
