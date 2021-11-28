@@ -1,6 +1,6 @@
 import React from "react";
 import { demo_heading, demo_category } from "../../assets/constant";
-import { BigBlogCard } from "../../components/BigBlogCard/BigBlogCard";
+import { BigBlogCard } from "../../components/Card/BigBlogCard";
 import car1 from "../../assets/car-1.jpg";
 
 export const HelpCardList = () => {
