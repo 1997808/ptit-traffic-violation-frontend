@@ -1,12 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Header } from "../../components/Layout/Header";
+import { SideBar } from "../../components/Layout/SideBar";
 
 export const AdminLayout = () => {
   return (
     <>
-      <Header />
-      <Outlet />
+      <SideBar />
+      <div className="md:ml-64 bg-gray-50 min-h-screen px-8">
+        <Outlet />
+      </div>
     </>
   );
 };

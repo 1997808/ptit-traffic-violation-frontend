@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading } from "../../components/Heading/Heading";
+import { Heading } from "../../components/Text/Heading";
 import { demo_heading, demo_subtitle, demo_price } from "../../assets/constant";
 import { CourseCard } from "../../components/Card/CourseCard";
 import car1 from "../../assets/car-1.jpg";
