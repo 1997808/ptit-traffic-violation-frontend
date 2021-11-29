@@ -2,10 +2,13 @@ import React from "react";
 import { ButtonGradient } from "../Button/ButtonGradient";
 import { useForm } from "react-hook-form";
 import { input_normal } from "../../assets/css_constant";
+import { useSelector, useDispatch } from "react-redux";
+import { login } from "../../app/reducers/auth";
 
 export const LoginForm = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -33,7 +36,9 @@ export const LoginForm = () => {
                 />
               </div>
             </div>
-            <ButtonGradient text={"Tìm kiếm"} type="submit" />
+            <div onClick={() => dispatch(login())}>
+              <ButtonGradient text={"Tìm kiếm"} type="submit" />
+            </div>
           </div>
         </form>
       </div>

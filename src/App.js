@@ -11,6 +11,7 @@ import { Contact } from "./features/pages/client/contact";
 
 import { ClientLayout } from "./features/layout/client";
 import { Search } from "./features/layout/search";
+import { ProtectedRoute } from "./assets/ProtectedRoute";
 import "./App.css";
 
 function App() {
@@ -23,7 +24,14 @@ function App() {
             <Route index element={<ItemList />} />
             <Route path=":itemId" element={<ItemDetail />} />
           </Route>
-          <Route path="blog" element={<Blog />} />
+          <Route
+            path="blog"
+            element={
+              <ProtectedRoute>
+                <Blog />
+              </ProtectedRoute>
+            }
+          />
           <Route path="help" element={<Help />} />
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />

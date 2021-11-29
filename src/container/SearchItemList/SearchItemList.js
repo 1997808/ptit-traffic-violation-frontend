@@ -4,14 +4,8 @@ import { SearchItem } from "../../components/SearchItem/SearchItem";
 export const SearchItemList = () => {
   const data = [
     {
-      id: "123",
-      licensePlate: "30A84392",
-      amount: 140000,
-      status: "Chưa nộp",
-    },
-    {
-      id: "124",
-      licensePlate: "30A84392",
+      id: "12345",
+      licensePlate: "30A12345",
       amount: 140000,
       status: "Chưa nộp",
     },
