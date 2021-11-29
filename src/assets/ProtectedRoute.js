@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { useLocation, Navigate } from "react-router-dom";
+import { useLocation, Navigate, Outlet } from "react-router-dom";
 
 export const ProtectedRoute = ({ children }) => {
   const auth = useSelector((state) => state.auth);

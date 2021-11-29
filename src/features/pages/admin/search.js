@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Search = () => {
+export const AdminSearch = () => {
   return (
     <div className="">
-      <p>404</p>
+      <p>Tìm kiếm</p>
     </div>
   );
 };

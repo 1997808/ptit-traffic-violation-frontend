@@ -11,7 +11,7 @@ export const Header = () => {
             <p className="text-xl">Vipham</p>
           </Link>
           <div className="flex justify-between">
-            <Link to="/search">
+            <Link to="/item">
               <p className="text-base px-6 py-2">Tìm kiếm</p>
             </Link>
             <Link to="/blog">

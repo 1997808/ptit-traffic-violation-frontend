@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Payment = () => {
+export const AdminPayment = () => {
   return (
     <div className="">
-      <p>404</p>
+      <p>Form nộp</p>
     </div>
   );
 };

@@ -10,6 +10,11 @@ import { Help } from "./features/pages/client/help";
 import { Contact } from "./features/pages/client/contact";
 
 import { AdminHome } from "./features/pages/admin/index";
+import { AdminSearch } from "./features/pages/admin/search";
+import { AdminItemDetail } from "./features/pages/admin/itemDetail";
+import { AdminPayment } from "./features/pages/admin/payment";
+import { AdminPaymentHisoty } from "./features/pages/admin/paymentHistory";
+import { AdminReceipt } from "./features/pages/admin/receipt";
 
 import { ClientLayout } from "./features/layout/client";
 import { AdminLayout } from "./features/layout/admin";
@@ -23,7 +28,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<ClientLayout />}>
           <Route index element={<Home />} />
-          <Route path="search" element={<Search />}>
+          <Route path="item" element={<Search />}>
             <Route index element={<ItemList />} />
             <Route path=":itemId" element={<ItemDetail />} />
           </Route>
@@ -40,15 +45,23 @@ function App() {
           />
           <Route path="*" element={<Page404 />} />
         </Route>
-        <Route path="admin" element={<AdminLayout />}>
-          <Route
-            index
-            element={
-              <ProtectedRoute>
-                <AdminHome />
-              </ProtectedRoute>
-            }
-          />
+        <Route
+          path="admin"
+          element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<AdminHome />} />
+          <Route path="item">
+            <Route index element={<AdminSearch />} />
+            <Route path=":itemId" element={<AdminItemDetail />} />
+          </Route>
+          <Route path="history" element={<AdminPaymentHisoty />} />
+          <Route path="payment" element={<AdminPayment />} />
+          <Route path="receipt" element={<AdminReceipt />} />
+          <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
     </Router>

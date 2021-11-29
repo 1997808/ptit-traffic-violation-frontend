@@ -1,9 +1,9 @@
 import React from "react";
 
-export const ItemDetail = () => {
+export const AdminItemDetail = () => {
   return (
     <div className="">
-      <p>404</p>
+      <p>chi tiết</p>
     </div>
   );
 };

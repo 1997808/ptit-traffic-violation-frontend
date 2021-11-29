@@ -6,7 +6,7 @@ export const AdminLayout = () => {
   return (
     <>
       <SideBar />
-      <div className="md:ml-64 bg-gray-50 min-h-screen px-8">
+      <div className="md:ml-64 bg-gray-50 min-h-screen p-8">
         <Outlet />
       </div>
     </>

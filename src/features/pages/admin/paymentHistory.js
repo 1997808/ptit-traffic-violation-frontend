@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Cart = () => {
+export const AdminPaymentHisoty = () => {
   return (
     <div className="">
-      <p>404</p>
+      <p>Danh sách nộp</p>
     </div>
   );
 };
