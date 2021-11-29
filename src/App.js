@@ -9,9 +9,12 @@ import { ItemList } from "./features/pages/client/itemList";
 import { Help } from "./features/pages/client/help";
 import { Contact } from "./features/pages/client/contact";
 
+import { AdminHome } from "./features/pages/admin/index";
+
 import { ClientLayout } from "./features/layout/client";
+import { AdminLayout } from "./features/layout/admin";
 import { Search } from "./features/layout/search";
-import { ProtectedRoute } from "./assets/ProtectedRoute";
+import { ProtectedRoute, AuthRoute } from "./assets/ProtectedRoute";
 import "./App.css";
 
 function App() {
@@ -24,18 +27,28 @@ function App() {
             <Route index element={<ItemList />} />
             <Route path=":itemId" element={<ItemDetail />} />
           </Route>
+          <Route path="blog" element={<Blog />} />
+          <Route path="help" element={<Help />} />
+          <Route path="contact" element={<Contact />} />
           <Route
-            path="blog"
+            path="login"
+            element={
+              <AuthRoute>
+                <Login />
+              </AuthRoute>
+            }
+          />
+          <Route path="*" element={<Page404 />} />
+        </Route>
+        <Route path="admin" element={<AdminLayout />}>
+          <Route
+            index
             element={
               <ProtectedRoute>
-                <Blog />
+                <AdminHome />
               </ProtectedRoute>
             }
           />
-          <Route path="help" element={<Help />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="login" element={<Login />} />
-          <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
     </Router>

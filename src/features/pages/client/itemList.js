@@ -1,5 +1,5 @@
 import React from "react";
-import { AdvanceSearch } from "../../../components/AdvanceSearch/AdvanceSearch";
+import { AdvanceSearch } from "../../../components/Form/AdvanceSearch";
 import { HelpCardList } from "../../../container/HelpCardList/HelpCardList";
 import { SearchItemList } from "../../../container/SearchItemList/SearchItemList";
 

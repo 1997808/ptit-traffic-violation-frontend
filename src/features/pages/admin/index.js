@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Home = () => {
+export const AdminHome = () => {
   return (
     <div className="">
-      <p>404</p>
+      <p>Admin</p>
     </div>
   );
 };

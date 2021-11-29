@@ -2,13 +2,22 @@ import React from "react";
 import { ButtonGradient } from "../Button/ButtonGradient";
 import { useForm } from "react-hook-form";
 import { input_normal } from "../../assets/css_constant";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { login } from "../../app/reducers/auth";
 
 export const LoginForm = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
   const dispatch = useDispatch();
+  let navigate = useNavigate();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    dispatch(login());
+    if (data) {
+      navigate("../admin", { replace: true });
+    }
+  };
 
   return (
     <>
@@ -36,12 +45,34 @@ export const LoginForm = () => {
                 />
               </div>
             </div>
-            <div onClick={() => dispatch(login())}>
-              <ButtonGradient text={"Tìm kiếm"} type="submit" />
-            </div>
+            <ButtonGradient text={"Tìm kiếm"} type="submit" />
           </div>
         </form>
       </div>
     </>
   );
 };
+
+// const onSubmit = async (data) => {
+//   const loginHandler = await MyAxios.post("/login", {
+//     username: data.username,
+//     password: data.password,
+//   }).then((response) => {
+//     if (response.data.message) {
+//       alert(response.data.message);
+//     } else {
+//       if (response.data.role === "user") {
+//         localStorage.setItem("token", response.data.token);
+//         dispatch(setUserID(response.data.accountID));
+//         dispatch(userAuth());
+//         setTimeout(() => history.push("/"), 1000);
+//       } else if (response.data.role === "admin") {
+//         localStorage.setItem("token", response.data.token);
+//         dispatch(adminAuth());
+//         setTimeout(() => history.push("/admin"), 1000);
+//       }
+//     }
+//   });
+
+//   return loginHandler;
+// };

@@ -8,7 +8,7 @@ import {
   demo_date,
   demo_content,
 } from "../../assets/constant";
-import { ClientCard } from "../../components/ClientCard/ClientCard";
+import { ClientCard } from "../../components/Card/ClientCard";
 import bitcoin from "../../assets/bitcoin.png";
 
 export const ClientCardList = () => {
