@@ -1,5 +1,5 @@
 import React from "react";
-import { AdminSearchItemDetail } from "../../../components/SearchItem/AdminSearchItemDetail";
+import { AdminSearchItemDetail } from "../../../components/Form/AdminSearchItemDetail";
 
 export const AdminItemDetail = () => {
   const data = {

@@ -1,13 +1,13 @@
 import React from "react";
-import { AdminSearchItem } from "../../components/SearchItem/AdminSearchItem";
+import { AdminViolationItem } from "../../components/SearchItem/AdminViolationItem";
 
-export const AdminSearchItemList = () => {
+export const AdminViolationItemList = () => {
   const data = [
     {
       id: "12345",
-      licensePlate: "30A12345",
+      name: "Vượt đèn đỏ",
       amount: 140000,
-      status: "Chưa nộp",
+      vehicle: "Ô tô",
     },
   ];
   return (
@@ -15,21 +15,21 @@ export const AdminSearchItemList = () => {
       <table className="table-fixed w-full">
         <thead>
           <tr className="text-left border-b border-solid border-gray-200">
-            <th className="w-1/4 p-4">Số quyết định</th>
-            <th className="w-1/4 p-4">Biển kiểm soát</th>
+            <th className="w-1/4 p-4">Id</th>
+            <th className="w-1/4 p-4">Tên</th>
             <th className="w-1/4 p-4">Số tiền</th>
-            <th className="w-1/4 p-4">Trạng thái</th>
+            <th className="w-1/4 p-4">Phương tiện</th>
           </tr>
         </thead>
         <tbody>
           {data &&
             data.map((items) => (
-              <AdminSearchItem
+              <AdminViolationItem
                 key={items.id}
                 id={items.id}
-                licensePlate={items.licensePlate}
+                name={items.name}
                 amount={items.amount}
-                status={items.status}
+                vehicle={items.vehicle}
               />
             ))}
         </tbody>

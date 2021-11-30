@@ -13,7 +13,7 @@ import { AdminHome } from "./features/pages/admin/index";
 import { AdminSearch } from "./features/pages/admin/search";
 import { AdminItemDetail } from "./features/pages/admin/itemDetail";
 import { AdminPayment } from "./features/pages/admin/payment";
-import { AdminPaymentHisoty } from "./features/pages/admin/paymentHistory";
+import { AdminViolation } from "./features/pages/admin/violation";
 import { AdminReceipt } from "./features/pages/admin/receipt";
 
 import { ClientLayout } from "./features/layout/client";
@@ -58,7 +58,7 @@ function App() {
             <Route index element={<AdminSearch />} />
             <Route path=":itemId" element={<AdminItemDetail />} />
           </Route>
-          <Route path="history" element={<AdminPaymentHisoty />} />
+          <Route path="violation" element={<AdminViolation />} />
           <Route path="payment" element={<AdminPayment />} />
           <Route path="receipt" element={<AdminReceipt />} />
           <Route path="*" element={<Page404 />} />

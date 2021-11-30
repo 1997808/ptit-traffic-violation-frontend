@@ -27,7 +27,11 @@ export const SideBar = () => {
         <hr className="my-4 md:min-w-full"></hr>
         <DashBtn name="Tổng quan" link="admin" pathNow={pathNow} />
         <DashBtn name="Tìm kiếm" link="admin/item" pathNow={pathNow} />
-        <DashBtn name="Lịch sử" link="admin/history" pathNow={pathNow} />
+        <DashBtn
+          name="Danh sách vi phạm"
+          link="admin/violation"
+          pathNow={pathNow}
+        />
         <hr className="my-4 md:min-w-full"></hr>
         {/* <DashBtn name="Thêm vi phạm" link="admin/add" pathNow={pathNow} /> */}
         {/* <DashBtn name="Nộp phạt" link="admin/payment" pathNow={pathNow} /> */}
