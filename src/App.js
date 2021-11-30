@@ -19,7 +19,7 @@ import { AdminReceipt } from "./features/pages/admin/receipt";
 import { ClientLayout } from "./features/layout/client";
 import { AdminLayout } from "./features/layout/admin";
 import { Search } from "./features/layout/search";
-import { ProtectedRoute, AuthRoute } from "./assets/ProtectedRoute";
+import { ProtectedRoute, AuthRoute } from "./assets/CustomRoute";
 import "./App.css";
 
 function App() {
