@@ -28,13 +28,23 @@ export const SideBar = () => {
         <DashBtn name="Tổng quan" link="admin" pathNow={pathNow} />
         <DashBtn name="Tìm kiếm" link="admin/item" pathNow={pathNow} />
         <DashBtn
+          name="Thêm quyết định"
+          link="admin/item/add"
+          pathNow={pathNow}
+        />
+        <DashBtn
           name="Danh sách vi phạm"
           link="admin/violation"
           pathNow={pathNow}
         />
+        <DashBtn
+          name="Thêm vi phạm"
+          link="admin/violation/add"
+          pathNow={pathNow}
+        />
         <hr className="my-4 md:min-w-full"></hr>
-        {/* <DashBtn name="Thêm vi phạm" link="admin/add" pathNow={pathNow} /> */}
-        {/* <DashBtn name="Nộp phạt" link="admin/payment" pathNow={pathNow} /> */}
+        <DashBtn name="User" link="admin/user" pathNow={pathNow} />
+        <DashBtn name="Thêm User" link="admin/user/add" pathNow={pathNow} />
         <div onClick={() => logoutHandler()}>
           <DashBtn name="Đăng xuất" pathNow={pathNow} />
         </div>

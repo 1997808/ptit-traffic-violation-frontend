@@ -5,7 +5,7 @@ import { input_normal } from "../../assets/css_constant";
 import { Button } from "../Button/Button";
 
 export const AdminSearchItemDetail = ({ id, licensePlate, amount, status }) => {
-  // let { itemId } = useParams();
+  // let { id } = useParams();
   // const [readOnly, setReadOnly] = useState(true);
   const { register, handleSubmit, reset } = useForm({
     defaultValues: {

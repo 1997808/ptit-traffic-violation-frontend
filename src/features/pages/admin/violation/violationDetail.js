@@ -1,7 +1,7 @@
 import React from "react";
-import { AdminSearchItemDetail } from "../../../components/Form/AdminSearchItemDetail";
+import { AdminSearchItemDetail } from "../../../../components/Form/AdminSearchItemDetail";
 
-export const AdminItemDetail = () => {
+export const AdminViolationDetail = () => {
   const data = {
     id: "12345",
     licensePlate: "30A12345",

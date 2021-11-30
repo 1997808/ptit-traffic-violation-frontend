@@ -1,9 +1,9 @@
 import React from "react";
 
-export const AdminReceipt = () => {
+export const AdminAddItem = () => {
   return (
     <div className="">
-      <p>Hóa đơn</p>
+      <p>Thêm quyết định</p>
     </div>
   );
 };
