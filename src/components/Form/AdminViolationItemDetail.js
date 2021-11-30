@@ -2,44 +2,52 @@ import React, { useEffect } from "react";
 // import { useParams } from "react-router";
 import { useForm } from "react-hook-form";
 import { input_normal } from "../../assets/css_constant";
+import { vehicleData } from "../../assets/constant";
 import { Button } from "../Button/Button";
 
-export const AdminSearchItemDetail = ({ id, licensePlate, amount, status }) => {
-  // let { id } = useParams();
-  // const [readOnly, setReadOnly] = useState(true);
+export const AdminViolationItemDetail = ({ name, vehicle, amount }) => {
   const { register, handleSubmit, reset } = useForm({
     defaultValues: {
-      id: "",
-      licensePlate: "",
+      name: "",
+      vehicle: "",
       amount: 0,
-      status: "",
     },
   });
   const onSubmit = (data) => {
     console.log(data);
   };
   useEffect(() => {
-    reset({ id, licensePlate, amount, status });
-  }, [reset, id, licensePlate, amount, status]);
+    reset({ name, vehicle, amount });
+  }, [reset, name, vehicle, amount]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="container mx-auto p-8 lg:p-12 shadow-xl rounded-lg bg-white">
         <div className="mb-8">
-          <p className="mb-2">Số quyết định</p>
+          <p className="mb-2">Tên vi phạm</p>
           <input
             type="text"
-            {...register("id", { required: true })}
+            {...register("name", { required: true })}
             className={input_normal}
           />
         </div>
         <div className="mb-8">
-          <p className="mb-2">Biển kiểm soát</p>
-          <input
-            type="text"
-            {...register("licensePlate", { required: true })}
+          <p className="mb-2">Phương tiện</p>
+          <select
+            {...register("vehicle", { required: true })}
             className={input_normal}
-          />
+            defaultValue=""
+          >
+            <option value="" disabled hidden>
+              {""}
+            </option>
+
+            {vehicleData.map((items) => (
+              <option key={items.value} value={items.value}>
+                {items.name}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="mb-8">
           <p className="mb-2">Số tiền</p>
@@ -47,15 +55,6 @@ export const AdminSearchItemDetail = ({ id, licensePlate, amount, status }) => {
             type="number"
             {...register("amount", { required: true })}
             className={input_normal}
-          />
-        </div>
-        <div className="mb-8">
-          <p className="mb-2">Trạng thái</p>
-          <input
-            type="text"
-            {...register("status", { required: true })}
-            className={input_normal}
-            readOnly={true}
           />
         </div>
 

@@ -1,20 +1,18 @@
 import React from "react";
-import { AdminSearchItemDetail } from "../../../../components/Form/AdminSearchItemDetail";
+import { AdminViolationItemDetail } from "../../../../components/Form/AdminViolationItemDetail";
 
 export const AdminViolationDetail = () => {
   const data = {
-    id: "12345",
-    licensePlate: "30A12345",
+    name: "Vượt đèn đỏ",
+    vehicle: "Xe máy",
     amount: 140000,
-    status: "Chưa nộp",
   };
   return (
     <div className="">
-      <AdminSearchItemDetail
-        id={data.id}
-        licensePlate={data.licensePlate}
+      <AdminViolationItemDetail
+        name={data.name}
+        vehicle={data.vehicle}
         amount={data.amount}
-        status={data.status}
       />
     </div>
   );

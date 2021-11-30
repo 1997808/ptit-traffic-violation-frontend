@@ -2,6 +2,7 @@ import React from "react";
 import { ButtonGradient } from "../Button/ButtonGradient";
 import { useForm } from "react-hook-form";
 import { input_normal } from "../../assets/css_constant";
+import { vehicleData } from "../../assets/constant";
 
 export const AdminQuickSearch = () => {
   const { register, handleSubmit } = useForm();
@@ -20,7 +21,6 @@ export const AdminQuickSearch = () => {
                 <p className="mb-2">Số quyết định</p>
                 <input
                   type="text"
-                  placeholder="nhập số quyết định"
                   {...register("id", { required: true })}
                   className={input_normal}
                 />
@@ -39,10 +39,17 @@ export const AdminQuickSearch = () => {
                 <select
                   {...register("vehicle", { required: true })}
                   className={input_normal}
+                  defaultValue=""
                 >
-                  <option value="oTo">Ô tô</option>
-                  <option value="xeMay">Xe máy</option>
-                  <option value="xeDien">Xe điện</option>
+                  <option value="" disabled hidden>
+                    {""}
+                  </option>
+
+                  {vehicleData.map((items) => (
+                    <option key={items.value} value={items.value}>
+                      {items.name}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>

@@ -1,9 +1,10 @@
 import React from "react";
+import { AdminAddViolationItem } from "../../../../components/Form/AdminAddViolationItem";
 
 export const AdminAddViolation = () => {
   return (
     <div className="">
-      <p>Thêm vi phạm</p>
+      <AdminAddViolationItem />
     </div>
   );
 };
