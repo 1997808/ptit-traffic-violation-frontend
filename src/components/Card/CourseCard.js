@@ -12,7 +12,7 @@ export const CourseCard = ({ title, price, image }) => {
           <p className="text-base py-3 font-semibold text-indigo-600">
             {price}
           </p>
-          <Button text={demo_button} />
+          <Button text={demo_button} type={"button"} />
         </div>
       </div>
     </>
