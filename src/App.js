@@ -19,7 +19,7 @@ import { AdminPayment } from "./features/pages/admin/payment";
 
 import { ClientLayout } from "./features/layout/client";
 import { AdminLayout } from "./features/layout/admin";
-import { ProtectedRoute, AuthRoute } from "./assets/CustomRoute";
+import { ProtectedRoute, AuthRoute } from "./assets/util/CustomRoute";
 import "./App.css";
 
 function App() {

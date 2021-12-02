@@ -4,9 +4,9 @@ import {
   demo_heading,
   demo_subtitle,
   demo_category,
-} from "../../assets/constant";
+} from "../../assets/util/constant";
 import { BigBlogCard } from "../../components/Card/BigBlogCard";
-import car1 from "../../assets/car-1.jpg";
+import car1 from "../../assets/images/car-1.jpg";
 
 export const GuideCardList = () => {
   return (

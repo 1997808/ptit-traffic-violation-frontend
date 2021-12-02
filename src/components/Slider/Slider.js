@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../../assets/banner_traffic.jpg";
+import banner from "../../assets/images/banner_traffic.jpg";
 import { ButtonGradient } from "../Button/ButtonGradient";
 
 export const Slider = () => {

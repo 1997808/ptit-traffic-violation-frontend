@@ -7,9 +7,9 @@ import {
   demo_rating,
   demo_date,
   demo_content,
-} from "../../assets/constant";
+} from "../../assets/util/constant";
 import { ClientCard } from "../../components/Card/ClientCard";
-import bitcoin from "../../assets/bitcoin.png";
+import bitcoin from "../../assets/images/bitcoin.png";
 
 export const ClientCardList = () => {
   return (

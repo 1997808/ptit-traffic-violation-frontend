@@ -1,7 +1,7 @@
 import React from "react";
 import { ButtonGradient } from "../Button/ButtonGradient";
 import { useForm } from "react-hook-form";
-import { input_normal } from "../../assets/css_constant";
+import { input_normal } from "../../assets/util/css_constant";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../app/reducers/auth";

@@ -1,6 +1,6 @@
 import React from "react";
-import { Td } from "../../assets/Td";
-import { vndFormatter } from "../../assets/util";
+import { Td } from "../../assets/util/Td";
+import { vndFormatter } from "../../assets/util/util";
 
 export const SearchItem = ({ id, licensePlate, amount, status }) => {
   return (

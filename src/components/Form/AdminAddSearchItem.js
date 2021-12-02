@@ -1,9 +1,9 @@
 import React from "react";
 // import { useParams } from "react-router";
 import { useForm } from "react-hook-form";
-import { input_normal } from "../../assets/css_constant";
+import { input_normal } from "../../assets/util/css_constant";
 import { Button } from "../Button/Button";
-import { vehicleData } from "../../assets/constant";
+import { vehicleData } from "../../assets/util/constant";
 
 export const AdminAddSearchItem = () => {
   // let { id } = useParams();

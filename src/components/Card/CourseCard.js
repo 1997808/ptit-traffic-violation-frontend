@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../Button/Button";
-import { demo_button } from "../../assets/constant";
+import { demo_button } from "../../assets/util/constant";
 
 export const CourseCard = ({ title, price, image }) => {
   return (

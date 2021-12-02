@@ -1,5 +1,5 @@
 import React from "react";
-// import logo from "../../../assets/logo.png";
+// import logo from "../../../assets/images/logo.png";
 import { Slider } from "../../../components/Slider/Slider";
 import { QuickSearch } from "../../../components/Form/QuickSearch";
 import { PopularCardList } from "../../../container/PopularCardList/PopularCardList";
