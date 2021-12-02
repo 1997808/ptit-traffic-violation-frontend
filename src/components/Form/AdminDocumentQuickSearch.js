@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { input_normal } from "../../assets/util/css_constant";
 import { vehicleData } from "../../assets/util/constant";
 
-export const AdminQuickSearch = () => {
+export const AdminDocumentQuickSearch = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
 

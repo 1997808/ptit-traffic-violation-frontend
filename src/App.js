@@ -9,9 +9,9 @@ import { Help } from "./features/pages/client/help";
 import { Contact } from "./features/pages/client/contact";
 
 import { AdminHome } from "./features/pages/admin/index";
-import { AdminItem } from "./features/pages/admin/item/index";
-import { AdminAddItem } from "./features/pages/admin/item/addItem";
-import { AdminItemDetail } from "./features/pages/admin/item/itemDetail";
+import { AdminDocument } from "./features/pages/admin/document/index";
+import { AdminAddDocument } from "./features/pages/admin/document/addDocument";
+import { AdminDocumentDetail } from "./features/pages/admin/document/documentDetail";
 import { AdminViolation } from "./features/pages/admin/violation/index";
 import { AdminAddViolation } from "./features/pages/admin/violation/addViolation";
 import { AdminViolationDetail } from "./features/pages/admin/violation/violationDetail";
@@ -52,9 +52,9 @@ function App() {
         >
           <Route index element={<AdminHome />} />
           <Route path="item">
-            <Route index element={<AdminItem />} />
-            <Route path="add" element={<AdminAddItem />} />
-            <Route path=":id" element={<AdminItemDetail />} />
+            <Route index element={<AdminDocument />} />
+            <Route path="add" element={<AdminAddDocument />} />
+            <Route path=":id" element={<AdminDocumentDetail />} />
           </Route>
           <Route path="violation">
             <Route index element={<AdminViolation />} />

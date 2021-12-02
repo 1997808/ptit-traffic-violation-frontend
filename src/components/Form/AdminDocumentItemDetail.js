@@ -4,7 +4,12 @@ import { useForm } from "react-hook-form";
 import { input_normal } from "../../assets/util/css_constant";
 import { Button } from "../Button/Button";
 
-export const AdminSearchItemDetail = ({ id, licensePlate, amount, status }) => {
+export const AdminDocumentItemDetail = ({
+  id,
+  licensePlate,
+  amount,
+  status,
+}) => {
   // let { id } = useParams();
   // const [readOnly, setReadOnly] = useState(true);
   const { register, handleSubmit, reset } = useForm({

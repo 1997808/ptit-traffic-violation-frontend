@@ -10,7 +10,6 @@ export const AdminViolation = () => {
 
   useEffect(() => {
     const getAllViolation = async (search) => {
-      console.log(search);
       await MyAxios.post("violation/getAllViolation.php", search)
         .then((res) => setData(res.data.data))
         .catch((error) => {

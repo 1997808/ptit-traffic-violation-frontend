@@ -5,7 +5,7 @@ import { input_normal } from "../../assets/util/css_constant";
 import { Button } from "../Button/Button";
 import { vehicleData } from "../../assets/util/constant";
 
-export const AdminAddSearchItem = () => {
+export const AdminAddDocumentItem = () => {
   // let { id } = useParams();
   // const [readOnly, setReadOnly] = useState(true);
   const { register, handleSubmit } = useForm({
