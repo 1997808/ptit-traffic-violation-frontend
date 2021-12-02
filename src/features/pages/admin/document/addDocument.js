@@ -21,7 +21,6 @@ export const AdminAddDocument = () => {
   const onSubmit = async (data) => {
     await MyAxios.post(`document/createDocument.php`, data)
       .then((res) => {
-        console.log(res.data);
         if (res.data) {
           setSuccess(1);
         } else {

@@ -12,8 +12,8 @@ export const AdminDocumentItem = ({
   change,
   setChange,
 }) => {
-  const deleteViolation = async (id) => {
-    await MyAxios.delete(`violation/deleteViolation.php?id=${id}`)
+  const deleteDocument = async (id) => {
+    await MyAxios.delete(`document/deleteDocument.php?id=${id}`)
       .then((res) => {
         change++;
         setChange(change);
@@ -32,7 +32,7 @@ export const AdminDocumentItem = ({
       <Td to={`/admin/item/${id}`}>{vndFormatter.format(amount)}</Td>
       <Td to={`/admin/item/${id}`}>{status}</Td>
       <Td>
-        <div onClick={() => deleteViolation(id)}>
+        <div onClick={() => deleteDocument(id)}>
           <ButtonDelete text="Xóa" type="button" />
         </div>
       </Td>

@@ -11,10 +11,7 @@ export const AdminDocument = () => {
   useEffect(() => {
     const getAllDocument = async (search) => {
       await MyAxios.post("document/getAllDocument.php", search)
-        .then((res) => {
-          console.log(res.data.data[0]);
-          setData(res.data.data);
-        })
+        .then((res) => setData(res.data.data))
         .catch((error) => {
           // handle error
           console.log(error);
@@ -25,10 +22,10 @@ export const AdminDocument = () => {
 
   return (
     <div className="">
-      <div className="mb-20">
+      <div className="mb-12">
         <AdminDocumentQuickSearch setSearch={setSearch} />
       </div>
-      <div className="mb-20">
+      <div className="mb-12">
         <AdminDocumentItemList
           data={data}
           change={change}
