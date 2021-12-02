@@ -4,9 +4,11 @@ import { useForm } from "react-hook-form";
 import { vehicleData } from "../../assets/util/constant";
 import { input_normal } from "../../assets/util/css_constant";
 
-export const AdminViolationSearch = () => {
+export const AdminViolationSearch = ({ setSearch }) => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    setSearch(data);
+  };
 
   return (
     <>
@@ -22,21 +24,18 @@ export const AdminViolationSearch = () => {
                 <input
                   type="text"
                   placeholder="VD: Vượt đèn đỏ"
-                  {...register("name", { required: true })}
+                  {...register("name")}
                   className={input_normal}
                 />
               </div>
               <div className="col-span-1">
                 <p className="mb-2">Loại phương tiện</p>
                 <select
-                  {...register("vehicle", { required: true })}
+                  {...register("vehicle")}
                   className={input_normal}
                   defaultValue=""
                 >
-                  <option value="" disabled hidden>
-                    {""}
-                  </option>
-
+                  <option value="">{""}</option>
                   {vehicleData.map((items) => (
                     <option key={items.value} value={items.value}>
                       {items.name}

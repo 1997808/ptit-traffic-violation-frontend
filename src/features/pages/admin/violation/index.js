@@ -5,22 +5,26 @@ import { AdminViolationItemList } from "../../../../container/SearchItemList/Adm
 
 export const AdminViolation = () => {
   const [data, setData] = useState([]);
+  const [search, setSearch] = useState();
   const [change, setChange] = useState(0);
+
   useEffect(() => {
-    const getAllViolation = async () => {
-      await MyAxios.get("violation/getAllViolation.php")
+    const getAllViolation = async (search) => {
+      console.log(search);
+      await MyAxios.post("violation/getAllViolation.php", search)
         .then((res) => setData(res.data.data))
         .catch((error) => {
           // handle error
           console.log(error);
         });
     };
-    getAllViolation();
-  }, [change]);
+    getAllViolation(search);
+  }, [change, search]);
+
   return (
     <div className="">
       <div className="mb-20">
-        <AdminViolationSearch />
+        <AdminViolationSearch setSearch={setSearch} />
       </div>
       <div className="">
         <AdminViolationItemList
