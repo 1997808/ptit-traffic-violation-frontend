@@ -4,9 +4,11 @@ import { useForm } from "react-hook-form";
 import { input_normal } from "../../assets/util/css_constant";
 import { vehicleData } from "../../assets/util/constant";
 
-export const AdminDocumentQuickSearch = () => {
+export const AdminDocumentQuickSearch = ({ setSearch }) => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    setSearch(data);
+  };
 
   return (
     <>
@@ -16,34 +18,32 @@ export const AdminDocumentQuickSearch = () => {
             Tra cứu, nộp phạt quyết định xử phạt vi phạm
           </div>
           <div className="w-full h-auto flex justify-between items-center">
-            <div className="grid grid-cols-3 gap-4 lg:gap-8 flex-grow pr-4 lg:pr-8">
-              <div className="col-span-1">
+            <div className="grid grid-cols-2 gap-4 lg:gap-8 flex-grow pr-4 lg:pr-8">
+              {/* <div className="col-span-1">
                 <p className="mb-2">Số quyết định</p>
                 <input
                   type="text"
-                  {...register("id", { required: true })}
+                  {...register("id")}
                   className={input_normal}
                 />
-              </div>
+              </div> */}
               <div className="col-span-1">
                 <p className="mb-2">Biển kiểm soát</p>
                 <input
                   type="text"
                   placeholder="VD: 30A12345"
-                  {...register("licensePlate", { required: true })}
+                  {...register("licensePlate")}
                   className={input_normal}
                 />
               </div>
               <div className="col-span-1">
                 <p className="mb-2">Loại phương tiện</p>
                 <select
-                  {...register("vehicle", { required: true })}
+                  {...register("vehicle")}
                   className={input_normal}
                   defaultValue=""
                 >
-                  <option value="" disabled hidden>
-                    {""}
-                  </option>
+                  <option value="">{""}</option>
 
                   {vehicleData.map((items) => (
                     <option key={items.value} value={items.value}>

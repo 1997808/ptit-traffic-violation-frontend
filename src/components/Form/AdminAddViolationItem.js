@@ -1,35 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 // import { useParams } from "react-router";
 import { useForm } from "react-hook-form";
 import { input_normal } from "../../assets/util/css_constant";
 import { Button } from "../Button/Button";
 import { vehicleData } from "../../assets/util/constant";
-import { MyAxios } from "../../assets/util/api";
+// import { MyAxios } from "../../assets/util/api";
 
-export const AdminAddViolationItem = () => {
-  // const [readOnly, setReadOnly] = useState(true);
-  const [success, setSuccess] = useState(null);
+export const AdminAddViolationItem = ({ success, data, onSubmit }) => {
+  // const [success, setSuccess] = useState(null);
   const { register, handleSubmit } = useForm({
     defaultValues: {
       name: "",
       vehicle: "",
     },
+    // defaultValues: data,
   });
-  const onSubmit = async (data) => {
-    await MyAxios.put(`violation/createViolation.php`, data)
-      .then((res) => {
-        if (res.data) {
-          setSuccess(1);
-        } else {
-          setSuccess(0);
-        }
-        setTimeout(() => setSuccess(null), 200);
-      })
-      .catch((error) => {
-        // handle error
-        console.log(error);
-      });
-  };
+  // const onSubmit = async (data) => {
+  //   await MyAxios.put(`violation/createViolation.php`, data)
+  //     .then((res) => {
+  //       if (res.data) {
+  //         setSuccess(1);
+  //       } else {
+  //         setSuccess(0);
+  //       }
+  //       setTimeout(() => setSuccess(null), 200);
+  //     })
+  //     .catch((error) => {
+  //       // handle error
+  //       console.log(error);
+  //     });
+  // };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
