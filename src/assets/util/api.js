@@ -2,7 +2,7 @@ import Axios from "axios";
 
 export const MyAxios = Axios.create({
   withCredentials: true,
-  baseURL: "http://localhost:3001",
+  baseURL: "http://localhost/ptit_traffic_api/api/",
 });
 
 export const MyToken = {
