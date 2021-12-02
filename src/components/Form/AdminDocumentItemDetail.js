@@ -3,29 +3,40 @@ import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { input_normal } from "../../assets/util/css_constant";
 import { Button } from "../Button/Button";
+import { MyAxios } from "../../assets/util/api";
 
 export const AdminDocumentItemDetail = ({
   id,
   licensePlate,
-  amount,
+  violationId,
+  vehicle,
   status,
+  violationData,
 }) => {
-  // let { id } = useParams();
-  // const [readOnly, setReadOnly] = useState(true);
   const { register, handleSubmit, reset } = useForm({
     defaultValues: {
       id: "",
       licensePlate: "",
-      amount: 0,
+      violationId: 0,
       status: "",
     },
   });
-  const onSubmit = (data) => {
-    console.log(data);
-  };
   useEffect(() => {
-    reset({ id, licensePlate, amount, status });
-  }, [reset, id, licensePlate, amount, status]);
+    reset({ id, licensePlate, violationId, status });
+  }, [reset, id, licensePlate, violationId, status]);
+  const onSubmit = async (data) => {
+    await MyAxios.put(`document/updateDocument.php`, {
+      ...data,
+      id: parseInt(id, 10),
+    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => {
+        // handle error
+        console.log(error);
+      });
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -46,13 +57,28 @@ export const AdminDocumentItemDetail = ({
             className={input_normal}
           />
         </div>
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <p className="mb-2">Số tiền</p>
           <input
             type="number"
             {...register("amount", { required: true })}
             className={input_normal}
           />
+        </div> */}
+        <div className="mb-8">
+          <p className="mb-2">Vi phạm</p>
+          <select
+            {...register("violationId", { required: true })}
+            className={input_normal}
+          >
+            {violationData
+              .filter((items) => items.vehicle === vehicle)
+              .map((items) => (
+                <option key={items.id} value={items.id}>
+                  {items.id + " " + items.name}
+                </option>
+              ))}
+          </select>
         </div>
         <div className="mb-8">
           <p className="mb-2">Trạng thái</p>

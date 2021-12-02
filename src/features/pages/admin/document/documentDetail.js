@@ -8,11 +8,25 @@ export const AdminDocumentDetail = () => {
   let { id } = useParams();
   let location = useLocation();
   const [data, setData] = useState({});
+  const [violationData, setViolationData] = useState([]);
+
+  useEffect(() => {
+    const getAllViolation = async () => {
+      await MyAxios.post("violation/getAllViolation.php")
+        .then((res) => setViolationData(res.data.data))
+        .catch((error) => {
+          // handle error
+          console.log(error);
+        });
+    };
+    getAllViolation();
+  }, []);
 
   useEffect(() => {
     const getAllDocument = async () => {
       await MyAxios.get(`document/getOneDocument.php?id=${id}`)
         .then((res) => {
+          console.log(res.data);
           setData(res.data);
         })
         .catch((error) => {
@@ -29,8 +43,11 @@ export const AdminDocumentDetail = () => {
         <AdminDocumentItemDetail
           id={data.id}
           licensePlate={data.licensePlate}
-          amount={data.amount}
+          violationId={data.violationId}
+          vehicle={data.vehicle}
+          // amount={data.amount}
           status={data.status}
+          violationData={violationData}
         />
       </div>
     );
