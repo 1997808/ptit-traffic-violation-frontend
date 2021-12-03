@@ -1,7 +1,8 @@
 import React from "react";
-import { demo_heading, demo_category } from "../../assets/util/constant";
+import { demo_category } from "../../assets/util/constant";
 import { BigBlogCard } from "../../components/Card/BigBlogCard";
-import car1 from "../../assets/images/car-1.jpg";
+import help4 from "../../assets/images/help4.jpeg";
+import help2 from "../../assets/images/help2.jpg";
 
 export const HelpCardList = () => {
   return (
@@ -10,16 +11,16 @@ export const HelpCardList = () => {
         <div className="grid grid-cols-2 gap-8 h-auto">
           <div className="col-span-1 h-40">
             <BigBlogCard
-              title={demo_heading}
+              title={"Hướng dẫn thi bằng lái A1"}
               category={demo_category}
-              image={car1}
+              image={help4}
             />
           </div>
           <div className="col-span-1 h-40">
             <BigBlogCard
-              title={demo_heading}
+              title={"Cầm vô lăng đúng cách"}
               category={demo_category}
-              image={car1}
+              image={help2}
             />
           </div>
         </div>

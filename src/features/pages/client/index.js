@@ -1,7 +1,7 @@
 import React from "react";
 // import logo from "../../../assets/images/logo.png";
 import { Slider } from "../../../components/Slider/Slider";
-import { QuickSearch } from "../../../components/Form/QuickSearch";
+// import { QuickSearch } from "../../../components/Form/QuickSearch";
 import { PopularCardList } from "../../../container/PopularCardList/PopularCardList";
 import { CourseCardList } from "../../../container/CourseCardList/CourseCardList";
 import { ClientCardList } from "../../../container/ClientCardList/ClientCardList";
