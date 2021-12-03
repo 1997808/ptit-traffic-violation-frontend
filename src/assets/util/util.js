@@ -12,3 +12,19 @@ export const statusFormatter = (text) => {
     return text;
   }
 };
+
+export const statusDisableFormatter = (text) => {
+  if (text === "paid") {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+export const documentPayFormatter = (text) => {
+  if (text === "paid") {
+    return "Đã nộp";
+  } else {
+    return "Thanh toán";
+  }
+};

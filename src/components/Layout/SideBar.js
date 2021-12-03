@@ -34,7 +34,7 @@ export const SideBar = () => {
         <h1 className="text-lg font-bold py-4">Dashboard</h1>
         <hr className="my-4 md:min-w-full"></hr>
         <DashBtn name="Tổng quan" link="admin" pathNow={pathNow} />
-        <DashBtn name="Tìm kiếm" link="admin/item" pathNow={pathNow} />
+        <DashBtn name="Tra cứu" link="admin/item" pathNow={pathNow} />
         <DashBtn
           name="Thêm quyết định"
           link="admin/item/add"

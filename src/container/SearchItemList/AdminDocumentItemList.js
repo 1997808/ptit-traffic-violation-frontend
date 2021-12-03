@@ -7,10 +7,10 @@ export const AdminDocumentItemList = ({ data, change, setChange }) => {
       <table className="table-fixed w-full">
         <thead>
           <tr className="text-left border-b border-solid border-gray-200">
-            <th className="w-1/5 p-4">Số quyết định</th>
+            <th className="w-1/5 p-4">Lỗi vi phạm</th>
             <th className="w-1/5 p-4">Biển kiểm soát</th>
             <th className="w-1/5 p-4">Số tiền</th>
-            <th className="w-1/5 p-4">Trạng thái</th>
+            <th className="w-1/5 p-4">Thanh toán</th>
             <th className="w-1/5 p-4"></th>
           </tr>
         </thead>
@@ -20,6 +20,7 @@ export const AdminDocumentItemList = ({ data, change, setChange }) => {
               <AdminDocumentItem
                 key={items.id}
                 id={items.id}
+                name={items.name}
                 licensePlate={items.licensePlate}
                 amount={items.amount}
                 status={items.status}

@@ -18,7 +18,7 @@ export const Footer = () => {
           <div className="col-span-1">
             <p className="text-xs text-gray-400">Về chúng tôi</p>
             <p className="text-sm pt-1">Trang chủ</p>
-            <p className="text-sm pt-1">Tìm kiếm</p>
+            <p className="text-sm pt-1">Tra cứu</p>
             <p className="text-sm pt-1">Bài viết</p>
             <p className="text-sm pt-1">Hướng dẫn</p>
             <p className="text-sm pt-1">Liên hệ</p>
