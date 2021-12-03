@@ -12,7 +12,7 @@ export const Header = () => {
           </Link>
           <div className="flex justify-between">
             <Link to="/item">
-              <p className="text-base px-6 py-2">Tìm kiếm</p>
+              <p className="text-base px-6 py-2">Tra cứu</p>
             </Link>
             <Link to="/blog">
               <p className="text-base px-6 py-2">Bài viết</p>

@@ -1,6 +1,7 @@
 import React from "react";
 import banner from "../../assets/images/banner_traffic.jpg";
 import { ButtonGradient } from "../Button/ButtonGradient";
+import { Link } from "react-router-dom";
 
 export const Slider = () => {
   return (
@@ -19,7 +20,9 @@ export const Slider = () => {
                 cứu, nộp phạt quyết định xử phạt vi phạm hành chính trong lĩnh
                 vực giao thông đường bộ
               </p>
-              <ButtonGradient text={"Hướng dẫn"} type="button" />
+              <Link to="/item">
+                <ButtonGradient text={"Tra cứu ngay"} type="button" />
+              </Link>
             </div>
           </div>
         </div>
