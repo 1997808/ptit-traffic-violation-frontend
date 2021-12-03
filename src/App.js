@@ -6,7 +6,7 @@ import { Page404 } from "./features/pages/client/404";
 import { Blog } from "./features/pages/client/blog";
 import { ItemList } from "./features/pages/client/itemList";
 import { Help } from "./features/pages/client/help";
-import { Contact } from "./features/pages/client/contact";
+import { Term } from "./features/pages/client/term";
 
 import { AdminHome } from "./features/pages/admin/index";
 import { AdminDocument } from "./features/pages/admin/document/index";
@@ -31,7 +31,7 @@ function App() {
           <Route path="item" element={<ItemList />} />
           <Route path="blog" element={<Blog />} />
           <Route path="help" element={<Help />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="term" element={<Term />} />
           <Route
             path="login"
             element={

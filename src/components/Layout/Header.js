@@ -20,8 +20,8 @@ export const Header = () => {
             <Link to="/help">
               <p className="text-base px-6 py-2">Hướng dẫn</p>
             </Link>
-            <Link to="/contact">
-              <p className="text-base px-6 py-2">Liên hệ</p>
+            <Link to="/term">
+              <p className="text-base px-6 py-2">Điều khoản</p>
             </Link>
           </div>
           <Link to="/login">
