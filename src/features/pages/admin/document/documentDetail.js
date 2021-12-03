@@ -26,7 +26,6 @@ export const AdminDocumentDetail = () => {
     const getAllDocument = async () => {
       await MyAxios.get(`document/getOneDocument.php?id=${id}`)
         .then((res) => {
-          console.log(res.data);
           setData(res.data);
         })
         .catch((error) => {

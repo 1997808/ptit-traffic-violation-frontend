@@ -5,18 +5,27 @@ import { input_normal } from "../../assets/util/css_constant";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../app/reducers/auth";
+import { MyAxios } from "../../assets/util/api";
 
 export const LoginForm = () => {
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
   let navigate = useNavigate();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    dispatch(login());
-    if (data) {
-      navigate("../admin", { replace: true });
-    }
+  const onSubmit = async (data) => {
+    await MyAxios.post(`user/login.php`, data)
+      .then((res) => {
+        if (res.data) {
+          dispatch(login());
+          navigate("../admin", { replace: true });
+        } else {
+          console.log("fail");
+        }
+      })
+      .catch((error) => {
+        // handle error
+        console.log(error);
+      });
   };
 
   return (
@@ -27,11 +36,11 @@ export const LoginForm = () => {
             <div className="text-lg mb-6">Đăng nhập</div>
             <div className="flex-grow px-4 lg:px-8">
               <div className="mb-4">
-                <p className="text-sm font-semibold mb-2">Username</p>
+                <p className="text-sm font-semibold mb-2">Email</p>
                 <input
                   type="text"
-                  placeholder="Username"
-                  {...register("username", { required: true })}
+                  placeholder="Email"
+                  {...register("email", { required: true })}
                   className={input_normal}
                 />
               </div>

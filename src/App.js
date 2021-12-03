@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./features/pages/client";
 import { Login } from "./features/pages/client/login";
@@ -21,8 +21,30 @@ import { ClientLayout } from "./features/layout/client";
 import { AdminLayout } from "./features/layout/admin";
 import { ProtectedRoute, AuthRoute } from "./assets/util/CustomRoute";
 import "./App.css";
+import { useDispatch } from "react-redux";
+import { MyAxios } from "./assets/util/api";
+import { login, logOut } from "./app/reducers/auth";
+// import {login} from
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const checkSession = async () => {
+      await MyAxios.get("user/checkSession.php")
+        .then((res) => {
+          if (res.data) {
+            dispatch(login());
+          } else {
+            dispatch(logOut());
+          }
+        })
+        .catch((error) => {
+          // handle error
+          console.log(error);
+        });
+    };
+    checkSession();
+  }, [dispatch]);
   return (
     <Router>
       <Routes>

@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate, useLocation } from "react-router";
 import { logOut } from "../../app/reducers/auth";
 import { DashBtn } from "../Text/DashBtn";
+import { MyAxios } from "../../assets/util/api";
 
 export const SideBar = () => {
   const dispatch = useDispatch();
@@ -15,9 +16,16 @@ export const SideBar = () => {
 
   const pathNow = usePathname();
 
-  const logoutHandler = () => {
-    dispatch(logOut());
-    navigate("/", { replace: true });
+  const logoutHandler = async () => {
+    await MyAxios.get(`user/logout.php`)
+      .then((res) => {
+        dispatch(logOut());
+        navigate("/", { replace: true });
+      })
+      .catch((error) => {
+        // handle error
+        console.log(error);
+      });
   };
 
   return (
