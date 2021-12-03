@@ -1,10 +1,13 @@
 import React from "react";
 
-export const OverviewCard = ({ title, data }) => {
+export const OverviewCard = ({ title, data, color }) => {
   return (
     <>
       <div className="w-full h-auto">
-        <div className="border border-solid border-gray-300 p-4">
+        <div
+          className="border border-solid border-gray-300 p-4"
+          style={{ background: color }}
+        >
           <p className="text-base font-semibold">{title}</p>
         </div>
         <div className="border border-solid border-gray-300 p-4">

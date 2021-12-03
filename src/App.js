@@ -24,6 +24,7 @@ import "./App.css";
 import { useDispatch } from "react-redux";
 import { MyAxios } from "./assets/util/api";
 import { login, logOut } from "./app/reducers/auth";
+import { ScrollToTop } from "./assets/util/CustomRoute";
 // import {login} from
 
 function App() {
@@ -47,51 +48,53 @@ function App() {
   }, [dispatch]);
   return (
     <Router>
-      <Routes>
-        <Route exact path="/" element={<ClientLayout />}>
-          <Route index element={<Home />} />
-          <Route path="item" element={<ItemList />} />
-          <Route path="blog" element={<Blog />} />
-          <Route path="help" element={<Help />} />
-          <Route path="term" element={<Term />} />
+      <ScrollToTop>
+        <Routes>
+          <Route exact path="/" element={<ClientLayout />}>
+            <Route index element={<Home />} />
+            <Route path="item" element={<ItemList />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="help" element={<Help />} />
+            <Route path="term" element={<Term />} />
+            <Route
+              path="login"
+              element={
+                <AuthRoute>
+                  <Login />
+                </AuthRoute>
+              }
+            />
+            <Route path="*" element={<Page404 />} />
+          </Route>
           <Route
-            path="login"
+            path="admin"
             element={
-              <AuthRoute>
-                <Login />
-              </AuthRoute>
+              <ProtectedRoute>
+                <AdminLayout />
+              </ProtectedRoute>
             }
-          />
-          <Route path="*" element={<Page404 />} />
-        </Route>
-        <Route
-          path="admin"
-          element={
-            <ProtectedRoute>
-              <AdminLayout />
-            </ProtectedRoute>
-          }
-        >
-          <Route index element={<AdminHome />} />
-          <Route path="item">
-            <Route index element={<AdminDocument />} />
-            <Route path="add" element={<AdminAddDocument />} />
-            <Route path=":id" element={<AdminDocumentDetail />} />
-          </Route>
-          <Route path="violation">
-            <Route index element={<AdminViolation />} />
-            <Route path="add" element={<AdminAddViolation />} />
-            <Route path=":id" element={<AdminViolationDetail />} />
-          </Route>
-          {/* <Route path="user">
+          >
+            <Route index element={<AdminHome />} />
+            <Route path="item">
+              <Route index element={<AdminDocument />} />
+              <Route path="add" element={<AdminAddDocument />} />
+              <Route path=":id" element={<AdminDocumentDetail />} />
+            </Route>
+            <Route path="violation">
+              <Route index element={<AdminViolation />} />
+              <Route path="add" element={<AdminAddViolation />} />
+              <Route path=":id" element={<AdminViolationDetail />} />
+            </Route>
+            {/* <Route path="user">
             <Route index element={<AdminViolation />} />
             <Route path="add" element={<AdminAddViolation />} />
             <Route path=":id" element={<AdminViolation />} />
           </Route> */}
-          <Route path="payment" element={<AdminPayment />} />
-          <Route path="*" element={<Page404 />} />
-        </Route>
-      </Routes>
+            <Route path="payment" element={<AdminPayment />} />
+            <Route path="*" element={<Page404 />} />
+          </Route>
+        </Routes>
+      </ScrollToTop>
     </Router>
   );
 }

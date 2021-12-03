@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+// import { useLocation } from "react-router";
 import { useSelector } from "react-redux";
 import { useLocation, Navigate } from "react-router-dom";
 
@@ -24,4 +25,13 @@ export const AuthRoute = ({ children }) => {
   }
 
   return children;
+};
+
+export const ScrollToTop = (props) => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return <>{props.children}</>;
 };
