@@ -12,8 +12,8 @@ export const QuickSearch = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="container mx-auto p-8 lg:p-12 shadow-xl rounded-lg bg-white">
           <div className="w-full h-auto flex justify-between items-center">
-            <div className="text-lg lg:text-xl">Tra cứu nhanh</div>
-            <div className="grid grid-cols-2 gap-4 flex-grow pr-4 lg:pr-8">
+            <div className="text-lg font-semibold">Tra cứu nhanh</div>
+            <div className="grid grid-cols-2 gap-4 flex-grow px-4 lg:px-8">
               <div className="col-span-1">
                 <p className="mb-2">Biển kiểm soát</p>
                 <input

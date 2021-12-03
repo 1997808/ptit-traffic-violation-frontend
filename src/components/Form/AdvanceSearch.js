@@ -3,9 +3,8 @@ import { ButtonGradient } from "../Button/ButtonGradient";
 import { useForm } from "react-hook-form";
 import { input_normal } from "../../assets/util/css_constant";
 
-export const AdvanceSearch = () => {
+export const AdvanceSearch = ({ onSubmit }) => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
 
   return (
     <>
@@ -15,16 +14,7 @@ export const AdvanceSearch = () => {
             Tra cứu, nộp phạt quyết định xử phạt vi phạm
           </div>
           <div className="w-full h-auto flex justify-between items-center">
-            <div className="grid grid-cols-3 gap-4 lg:gap-8 flex-grow pr-4 lg:pr-8">
-              <div className="col-span-1">
-                <p className="mb-2">Số quyết định</p>
-                <input
-                  type="text"
-                  placeholder="nhập số quyết định"
-                  {...register("id", { required: true })}
-                  className={input_normal}
-                />
-              </div>
+            <div className="grid grid-cols-2 gap-4 lg:gap-8 flex-grow pr-4 lg:pr-8">
               <div className="col-span-1">
                 <p className="mb-2">Biển kiểm soát</p>
                 <input
