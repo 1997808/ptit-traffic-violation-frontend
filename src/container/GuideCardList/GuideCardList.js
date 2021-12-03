@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading } from "../../components/Text/Heading";
 import {
-  demo_heading,
+  // demo_heading,
   demo_category,
   demo_category_2,
   demo_category_3,

@@ -9,7 +9,7 @@ export const BigBlogCard = ({ title, category, image }) => {
           src={image}
           alt="banner"
         />
-        <div className="absolute w-full h-full top-0 left-0 opacity-20 bg-black"></div>
+        <div className="absolute w-full h-full top-0 left-0 opacity-30 bg-black"></div>
         <div className="absolute w-full h-full top-0 left-0 p-8 flex items-end">
           <div className="text-white">
             <p className="text-sm">{category}</p>
